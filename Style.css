@@ -1,0 +1,114 @@
+:root {
+  --accent: #190c5e;   /* warna judul */
+  --muted: #000000;    /* titik kecil */
+  --soft:  #4852e9;    /* warna kartu hobi */
+  --text:  #222;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 32px 20px;
+  color: var(--text);
+  font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: #fff;
+}
+
+.container {
+  max-width: 1100px;
+  margin-inline: auto;
+}
+
+/* Bagian hero (foto di kiri) */
+.hero {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.photo {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, .08);
+}
+
+.photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Judul & perkenalan */
+h1 {
+  margin: 18px 0 8px;
+  color: var(--accent);
+  font-size: 40px;
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: .3px;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-left: 10px;
+  border-radius: 50%;
+  background: var(--muted);
+  vertical-align: middle;
+}
+
+.intro {
+  margin: 0 0 28px;
+}
+
+/* Kartu hobi */
+.card {
+  background: var(--soft);
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin: 10px 0 28px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .05);
+  color: #fff; /* biar teks lebih jelas di atas biru */
+}
+
+.card h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.card ul {
+  margin: 0 0 0 18px;
+}
+
+/* Kontak */
+.contact {
+  margin-top: 6px;
+}
+
+.contact a {
+  color: #c21f1f;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* Responsif */
+@media (min-width: 720px) {
+  .layout {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 24px;
+  }
+  .stack {
+    grid-column: 1 / -1;
+  }
+}
